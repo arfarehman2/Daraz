@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daraz</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+    <body>
+        <header>
+        <section class="slideshow">
+      <img class="mySlides" src="daraz (1).png" alt="Daraz" style="width:100%">
+       <img class="mySlides" src="daraz (2).png" alt="Daraz" style="width:100%">
+       <img class="mySlides" src="daraz (3).png" alt="Daraz" style="width:100%">
+    </section>
+             <div class="top-bar">
+
+        <div class="menu">
+            
+            <a href="helpandsupport.html">HELP & SUPPORT</a>
+            <a href="login.html">LOGIN</a>
+            <a href="signup.html">SIGN UP</a>
+        </div>
+
+    </div>
+ <div class="main-header">
+
+        <div class="logo">
+            <img src="daraz1.png" alt="Daraz">
+        </div>
+
+        <div class="search-box">
+
+            <input type="text" placeholder="Search in Daraz">
+
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                
+            </button>
+
+        </div>
+
+        <div class="cart">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+            
+
+        </div>
+
+    </div>
+   
+
+        </header>
+        <div class="footer">
+        <p>&copy; 2024 Daraz. All rights reserved.<br>
+        Contact Information
+Email: arfarehman2@gmail.com<br>
+Phone: +92 3357746710<br>
+Address: Sargodha, Pakistan<br>
+<h4>About Daraz</h4>
+
+Founded in 2012, Daraz has grown into one of South Asia's leading e-commerce platforms. Starting in Pakistan as an online fashion store, it has expanded into a trusted marketplace offering millions of products across multiple categories. Today, Daraz is committed to providing customers with a convenient, secure, and reliable online shopping experience.
+
+</p>
+        </div>
+
+    </body>
+    
+    <script>
+  let myindex=0;
+carousel();
+function carousel(){
+  let i;
+  let x=document.getElementsByClassName("mySlides");
+  for(i = 0; i<x.length; i++){
+    x[i].style.display ="none";
+  }
+  myindex++;
+  if(myindex > x.length){
+    myindex = 1;
+  }
+  x[myindex - 1].style.display = "block";
+  setTimeout(carousel,3000);
+}
+  </script>
+</html>
