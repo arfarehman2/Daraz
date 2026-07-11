@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change language</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Change Language</h1>
+    </header>
+
+    <div class="language-page">
+
+        <h2>Select Your Preferred Language</h2>
+
+        <p>
+            Choose your preferred language for a better shopping experience.
+        </p>
+
+        <div class="language-options">
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('es')">Español</button>
+            <button onclick="changeLanguage('fr')">Français</button>
+            <button onclick="changeLanguage('de')">Deutsch</button>
+            <button onclick="changeLanguage('zh')">中文</button>
+            <!-- Add more languages as needed -->
+        </div>
+
+        <br>
+
+        <button onclick="window.location.href='index.html'">
+            ← Back to Home
+        </button>
+
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            // Logic to change the language of the website
+            alert("Language changed to: " + lang);
+            // You can implement actual language change logic here
+        }
+    </script>
+</body>
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#f5f5f5;
+    }
+
+    header{
+        background:#f85606;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    .language-page{
+        width:70%;
+        margin:40px auto;
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.15);
+    }
+
+    h2{
+        color:#f85606;
+    }
+
+    .language-options button{
+        margin:10px 5px;
+        padding:10px 20px;
+        background:#f85606;
+        color:white;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        font-size:16px;
+    }
+
+    .language-options button:hover{
+        background:#d94d00;
+    }
+    </style>
+</html>
