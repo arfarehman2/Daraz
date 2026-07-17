@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order - Daraz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Track Your Order</h1>
+    </header>
+
+    <div class="tracking">
+
+        <div class="step completed">
+            <div class="date">20 Sep</div>
+        <div class="circle"></div>
+        <div class="content">
+            <h4>Ready to be shipped</h4>
+        </div>
+    </div>
+
+    <div class="step completed">
+        <div class="date">21 Sep</div>
+        <div class="circle"></div>
+        <div class="content">
+            <h4>Picked up by shipping provider</h4>
+        </div>
+    </div>
+
+    <div class="step active">
+        <div class="date">21 Sep</div>
+        <div class="circle"></div>
+        <div class="content">
+            <h4>On it's way</h4>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="date"></div>
+        <div class="circle"></div>
+        <div class="content">
+            <h4>Delivered</h4>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="date"></div>
+        <div class="circle"></div>
+        <div class="content">
+            <h4>Feedback</h4>
+        </div>
+    </div>
+
+</div>
+<button onclick="window.location.href='index.html'">
+    ← Back to Home
+</button>
+</body>
+<style>
+    body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.tracking{
+    width:420px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.step{
+    display:grid;
+    grid-template-columns:60px 30px 1fr;
+    position:relative;
+    padding-bottom:35px;
+}
+
+.step::before{
+    content:"";
+    position:absolute;
+    left:74px;
+    top:18px;
+    width:3px;
+    height:100%;
+    background:#cfcfcf;
+}
+
+.step:last-child::before{
+    display:none;
+}
+button{
+    margin:20px;
+    padding:10px 20px;
+    background:#f85606;
+    color:white;
+    border:#ff7300;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+button:hover{
+    background:#ff823e;
+}
+
+.date{
+    color:#ff9900;
+    font-size:16px;
+    text-align:right;
+    padding-right:10px;
+}
+
+.circle{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:white;
+    border:3px solid #cfcfcf;
+    margin:auto;
+    z-index:2;
+}
+
+.completed .circle{
+    background:#ffa600;
+    border-color:#ffcc00;
+}
+
+.completed::before{
+    background:#ffa600  ;
+}
+
+.active .circle{
+    background:#ffa600;
+    border-color:#ffcc00;
+}
+
+.active h4{
+    color:#ffa600       ;
+}
+
+.content h4{
+    margin:0;
+    font-size:16px;
+    color:#555;
+}
+</style>
+</html>
